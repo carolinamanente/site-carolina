@@ -1,0 +1,53 @@
+/* Estilos compartilhados por todas as páginas do site.
+   Regras específicas de cada página permanecem no <style> da própria página. */
+
+:root{
+  --paper:#F2ECDF;
+  --sage-1:#C9C7B4;
+  --sage-2:#A0A28A;
+  --charcoal:#262420;
+  --charcoal-soft:#6B675C;
+  --mustard:#D6A233;
+  --mustard-deep:#B98620;
+  --terracotta:#B3552E;
+  --olive:#767C5E;
+  --olive-deep:#4F5540;
+  --olive-tint:#DEE1D5;
+  --mustard-tint:#EFDAAD;
+}
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--charcoal);
+  font-family:'Work Sans', sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; }
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-size:0.72rem;
+  font-weight:500;
+  color:var(--terracotta);
+  margin:0 0 14px;
+}
+h1,h2,h3{ font-family:'Fraunces', serif; font-weight:500; margin:0; }
+
+/* NAV */
+.nav{ padding:26px 48px; border-bottom:1px solid rgba(38,36,32,0.1); }
+.nav-inner{ max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+.brand{ font-family:'Fraunces', serif; font-style:italic; font-size:1.3rem; text-decoration:none; }
+.nav-links a{ margin-left:32px; text-decoration:none; font-size:0.92rem; color:var(--charcoal-soft); transition:color .2s; }
+.nav-links a:hover{ color:var(--mustard-deep); }
+
+/* MINI CTA */
+.mini-cta{ background:var(--paper); padding:60px 48px; text-align:center; border-top:1px solid rgba(38,36,32,0.08); }
+.mini-cta p{ font-size:1rem; color:var(--charcoal-soft); margin:0; }
+.mini-cta a{ color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--mustard); padding-bottom:2px; }
+.mini-cta a:hover{ color:var(--mustard-deep); }
+
+/* REVEAL — animação de entrada ao rolar a página */
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
